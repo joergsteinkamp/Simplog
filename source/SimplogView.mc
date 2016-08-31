@@ -221,7 +221,6 @@ class SimplogView extends Ui.WatchFace {
 		}
 
 		var messageCount = Sys.getDeviceSettings().notificationCount;
-		messageCount=11;
 		// number of notifications
 		if (messageCount > 0) {
 			var digits = Math.floor(1+Math.log(messageCount, 10));
