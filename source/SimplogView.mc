@@ -158,23 +158,23 @@ class SimplogView extends Ui.WatchFace {
 		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
 		var innerX = centerX - Math.sin(angle + Math.PI/6) * radiusBattery;
 		var innerY = centerY + Math.cos(angle + Math.PI/6) * radiusBattery;
-		var midX1  = centerX + Math.sin(angle + Math.PI/6) * radiusBattery * 1.4;
-		var midY1  = centerY - Math.cos(angle + Math.PI/6) * radiusBattery * 1.4;
-		var midX2  = centerX + Math.sin(angle - Math.PI/6) * radiusBattery * 1.4;
-		var midY2  = centerY - Math.cos(angle - Math.PI/6) * radiusBattery * 1.4;
-		var outerX = centerX + Math.sin(angle) * radius * 0.68;
-		var outerY = centerY - Math.cos(angle) * radius * 0.68;
+		var midX1  = centerX + Math.sin(angle + Math.PI/6) * radiusBattery * 1.45;
+		var midY1  = centerY - Math.cos(angle + Math.PI/6) * radiusBattery * 1.45;
+		var midX2  = centerX + Math.sin(angle - Math.PI/6) * radiusBattery * 1.45;
+		var midY2  = centerY - Math.cos(angle - Math.PI/6) * radiusBattery * 1.45;
+		var outerX = centerX + Math.sin(angle) * radius * 0.7;
+		var outerY = centerY - Math.cos(angle) * radius * 0.7;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
 
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		innerX = centerX - Math.sin(angle + Math.PI/6) * radiusBattery;
 		innerY = centerY + Math.cos(angle + Math.PI/6) * radiusBattery;
-		midX1  = centerX + Math.sin(angle + Math.PI/6) * radiusBattery * 1.2;
-		midY1  = centerY - Math.cos(angle + Math.PI/6) * radiusBattery * 1.2;
-		midX2  = centerX + Math.sin(angle - Math.PI/6) * radiusBattery * 1.2;
-		midY2  = centerY - Math.cos(angle - Math.PI/6) * radiusBattery * 1.2;
-		outerX = centerX + Math.sin(angle) * radius * 0.65;
-		outerY = centerY - Math.cos(angle) * radius * 0.65;
+		midX1  = centerX + Math.sin(angle + Math.PI/6) * radiusBattery * 1.25;
+		midY1  = centerY - Math.cos(angle + Math.PI/6) * radiusBattery * 1.25;
+		midX2  = centerX + Math.sin(angle - Math.PI/6) * radiusBattery * 1.25;
+		midY2  = centerY - Math.cos(angle - Math.PI/6) * radiusBattery * 1.25;
+		outerX = centerX + Math.sin(angle) * radius * 0.67;
+		outerY = centerY - Math.cos(angle) * radius * 0.67;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
 
 		// hour hand
@@ -182,10 +182,10 @@ class SimplogView extends Ui.WatchFace {
 		angle = Math.PI * dayMinutes / 360;
 		innerX = centerX - Math.sin(angle + Math.PI/4) * radiusBattery;
 		innerY = centerY + Math.cos(angle + Math.PI/4) * radiusBattery;
-		midX1  = centerX + Math.sin(angle + Math.PI/4) * radiusBattery * 1.5;
-		midY1  = centerY - Math.cos(angle + Math.PI/4) * radiusBattery * 1.5;
-		midX2  = centerX + Math.sin(angle - Math.PI/4) * radiusBattery * 1.5;
-		midY2  = centerY - Math.cos(angle - Math.PI/4) * radiusBattery * 1.5;
+		midX1  = centerX + Math.sin(angle + Math.PI/4) * radiusBattery * 1.55;
+		midY1  = centerY - Math.cos(angle + Math.PI/4) * radiusBattery * 1.55;
+		midX2  = centerX + Math.sin(angle - Math.PI/4) * radiusBattery * 1.55;
+		midY2  = centerY - Math.cos(angle - Math.PI/4) * radiusBattery * 1.55;
 		outerX = centerX + Math.sin(angle) * radius * 0.5;
 		outerY = centerY - Math.cos(angle) * radius * 0.5;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
@@ -193,10 +193,10 @@ class SimplogView extends Ui.WatchFace {
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
 		innerX = centerX - Math.sin(angle + Math.PI/4) * radiusBattery;
 		innerY = centerY + Math.cos(angle + Math.PI/4) * radiusBattery;
-		midX1  = centerX + Math.sin(angle + Math.PI/4) * radiusBattery * 1.3;
-		midY1  = centerY - Math.cos(angle + Math.PI/4) * radiusBattery * 1.3;
-		midX2  = centerX + Math.sin(angle - Math.PI/4) * radiusBattery * 1.3;
-		midY2  = centerY - Math.cos(angle - Math.PI/4) * radiusBattery * 1.3;
+		midX1  = centerX + Math.sin(angle + Math.PI/4) * radiusBattery * 1.35;
+		midY1  = centerY - Math.cos(angle + Math.PI/4) * radiusBattery * 1.35;
+		midX2  = centerX + Math.sin(angle - Math.PI/4) * radiusBattery * 1.35;
+		midY2  = centerY - Math.cos(angle - Math.PI/4) * radiusBattery * 1.35;
 		outerX = centerX + Math.sin(angle) * radius * 0.48;
 		outerY = centerY - Math.cos(angle) * radius * 0.48;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
