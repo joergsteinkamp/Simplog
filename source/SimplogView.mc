@@ -16,7 +16,7 @@ class SimplogView extends Ui.WatchFace {
 	// display properties
 	hidden var centerX, centerY, radius;
 	// size of colored battery indicator (center point) 
-	hidden var radiusBattery = 6;
+	hidden var radiusBattery = 7;
 	// scale factor for symbols
 	hidden var symbolScale = 1;
 
@@ -98,7 +98,7 @@ class SimplogView extends Ui.WatchFace {
 			if ((i>13 && i<17) || i==0) {
 				continue;
 			} else if (i%5 == 0) {
-				dc.setPenWidth(2);
+				dc.setPenWidth(3);
 				length = 6;
 				innerX = centerX + Math.sin(angle) * (radius - length);
 				innerY = centerY - Math.cos(angle) * (radius - length);
@@ -106,8 +106,8 @@ class SimplogView extends Ui.WatchFace {
 				fontY = centerY - 2*length - Math.cos(angle) * (radius - 3*length);
 	    		dc.drawText(fontX, fontY, Gfx.FONT_TINY, i/5, Gfx.TEXT_JUSTIFY_CENTER);
 			} else {
-				dc.setPenWidth(1);
-				length = 2;
+				dc.setPenWidth(2);
+				length = 3;
 				innerX = centerX + Math.sin(angle) * (radius - length);
 				innerY = centerY - Math.cos(angle) * (radius - length);
 			}
@@ -130,23 +130,23 @@ class SimplogView extends Ui.WatchFace {
 	
 	// f_js_20160826
 	// draw the battery status at hour 12
-	// >80 green; >50% blue; >20% yellow; >10% orange; <10% red
+	// >80% white; >50 blue; >20% green; >10% yellow; >5% orange; <5% red
 	function drawBattery(dc) {
 		var battStat = Sys.getSystemStats().battery.toNumber();
 		if (battStat > 80) {
-			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 		} else if (battStat > 50) {
-			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
 		} else if (battStat > 20) {
-			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 		} else if (battStat > 10) {
-			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
 		} else if (battStat > 5) {
-			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_BLACK);	
+			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);	
 		} else {
-			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
 		}
-		dc.fillCircle(centerX, centerY, radiusBattery * symbolScale);
+		dc.fillCircle(centerX, centerY, radiusBattery * symbolScale + 2);
 	}
 	
 	function drawHands(dc) {
@@ -155,30 +155,30 @@ class SimplogView extends Ui.WatchFace {
 		// draw two polygons per hand: one larger gray
 		// minute hand
 		var angle = Math.PI * dayMinutes / 30;
-		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 		var innerX = centerX - Math.sin(angle + Math.PI/6) * radiusBattery;
 		var innerY = centerY + Math.cos(angle + Math.PI/6) * radiusBattery;
 		var midX1  = centerX + Math.sin(angle + Math.PI/6) * radiusBattery * 1.45;
 		var midY1  = centerY - Math.cos(angle + Math.PI/6) * radiusBattery * 1.45;
 		var midX2  = centerX + Math.sin(angle - Math.PI/6) * radiusBattery * 1.45;
 		var midY2  = centerY - Math.cos(angle - Math.PI/6) * radiusBattery * 1.45;
-		var outerX = centerX + Math.sin(angle) * radius * 0.7;
-		var outerY = centerY - Math.cos(angle) * radius * 0.7;
+		var outerX = centerX + Math.sin(angle) * radius * 0.73;
+		var outerY = centerY - Math.cos(angle) * radius * 0.73;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
 
-		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 		innerX = centerX - Math.sin(angle + Math.PI/6) * radiusBattery;
 		innerY = centerY + Math.cos(angle + Math.PI/6) * radiusBattery;
 		midX1  = centerX + Math.sin(angle + Math.PI/6) * radiusBattery * 1.25;
 		midY1  = centerY - Math.cos(angle + Math.PI/6) * radiusBattery * 1.25;
 		midX2  = centerX + Math.sin(angle - Math.PI/6) * radiusBattery * 1.25;
 		midY2  = centerY - Math.cos(angle - Math.PI/6) * radiusBattery * 1.25;
-		outerX = centerX + Math.sin(angle) * radius * 0.67;
-		outerY = centerY - Math.cos(angle) * radius * 0.67;
+		outerX = centerX + Math.sin(angle) * radius * 0.7;
+		outerY = centerY - Math.cos(angle) * radius * 0.7;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
 
 		// hour hand
-		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLACK);
+		dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 		angle = Math.PI * dayMinutes / 360;
 		innerX = centerX - Math.sin(angle + Math.PI/4) * radiusBattery;
 		innerY = centerY + Math.cos(angle + Math.PI/4) * radiusBattery;
@@ -190,7 +190,7 @@ class SimplogView extends Ui.WatchFace {
 		outerY = centerY - Math.cos(angle) * radius * 0.5;
 		dc.fillPolygon([[innerX, innerY], [midX1, midY1], [outerX, outerY], [midX2, midY2]]);
 
-		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 		innerX = centerX - Math.sin(angle + Math.PI/4) * radiusBattery;
 		innerY = centerY + Math.cos(angle + Math.PI/4) * radiusBattery;
 		midX1  = centerX + Math.sin(angle + Math.PI/4) * radiusBattery * 1.35;
@@ -209,7 +209,7 @@ class SimplogView extends Ui.WatchFace {
 		var fontHeight = Gfx.getFontHeight(Gfx.FONT_XTINY);
 		// is the phone connected?
 		if (Sys.getDeviceSettings().phoneConnected) {
-			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
 			dc.setPenWidth(symbolScale);
 			var btSymbol = [ [0, 9], [6, 3], [3, 0], [3, 12], [6, 9], [-1, 2] ];
 			for (var i = 0; i < btSymbol.size() - 1; i++) {
@@ -221,10 +221,11 @@ class SimplogView extends Ui.WatchFace {
 		}
 
 		var messageCount = Sys.getDeviceSettings().notificationCount;
+		//messageCount = 12;
 		// number of notifications
 		if (messageCount > 0) {
 			var digits = Math.floor(1+Math.log(messageCount, 10));
-			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
 			dc.setPenWidth(symbolScale);
 			var width = fontHeight * (2+digits)/3;
 			dc.fillRoundedRectangle(centerX + radius/4,
@@ -237,23 +238,24 @@ class SimplogView extends Ui.WatchFace {
 						Gfx.FONT_XTINY, messageCount, Gfx.TEXT_JUSTIFY_VCENTER);
 		}
 
+		fontHeight = Gfx.getFontHeight(Gfx.FONT_TINY);
 		var hrHist =  AM.getHeartRateHistory(1, true);
 		var hr = hrHist.next().heartRate;
 		if (hr != null && hr < 250) {
-			dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+			dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
 			var image = Ui.loadResource(Rez.Drawables.heart);
 			dc.drawBitmap(centerX/2.5 - 2, centerY-radius/3.5 ,image);
 			dc.drawText(centerX/2.5 + 15,
-						centerY - radius/3.5 - 4,
-						Gfx.FONT_XTINY, hr.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
+						centerY - radius/3.5 - 5,
+						Gfx.FONT_TINY, hr.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
 		} else {
-			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-			dc.drawText(18, centerY- Gfx.getFontHeight(Gfx.FONT_TINY)/2, Gfx.FONT_TINY, 9, Gfx.TEXT_JUSTIFY_CENTER);
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+			dc.drawText(18, centerY - fontHeight/2, Gfx.FONT_TINY, 9, Gfx.TEXT_JUSTIFY_CENTER);
 		}
 		
 		var altitude = Act.getActivityInfo().altitude;
 		if (altitude != null) {
-			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_BLACK);
+			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 			dc.setPenWidth(symbolScale);
 			var mtSymbol = [ [0, 10], [4, 2], [6, 6], [5, 4], [7, 0], [13, 11] ];
 			for (var i = 0; i < mtSymbol.size() - 1; i++) {
@@ -263,8 +265,8 @@ class SimplogView extends Ui.WatchFace {
 				            symbolScale * mtSymbol[i+1][1] + centerY - radius/2.2);
 			}
 			dc.drawText(centerX/2.5 + 15,
-						centerY - radius/2.2 - 4,
-						Gfx.FONT_XTINY, altitude.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
+						centerY - radius/2.2 - 6,
+						Gfx.FONT_TINY, altitude.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
 		}
 	}
 
