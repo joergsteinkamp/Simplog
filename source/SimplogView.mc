@@ -29,7 +29,7 @@ class SimplogView extends Ui.WatchFace {
     	// f_js_20160826
     	centerX = dc.getWidth() / 2;
     	centerY = dc.getHeight() / 2;
-    	radius = centerX < centerY ? centerY : centerX;
+    	radius = centerX < centerY ? centerX : centerY;
         setLayout(Rez.Layouts.WatchFace(dc));
     }
 
@@ -239,8 +239,11 @@ class SimplogView extends Ui.WatchFace {
 			}
 		}
 
+		var alarmCount = Sys.getDeviceSettings().alarmCount;
+		System.print(alarmCount);
+		
+
 		var messageCount = Sys.getDeviceSettings().notificationCount;
-		//messageCount = 12;
 		// number of notifications
 		if (messageCount > 0) {
 			var digits = Math.floor(1+Math.log(messageCount, 10));
@@ -256,7 +259,7 @@ class SimplogView extends Ui.WatchFace {
 						centerY - radius/3 - fontHeight/2 - 1,
 						Gfx.FONT_XTINY, messageCount, Gfx.TEXT_JUSTIFY_VCENTER);
 		}
-
+		// Heart rate
 		fontHeight = Gfx.getFontHeight(Gfx.FONT_TINY);
 		var hrHist =  AM.getHeartRateHistory(1, true);
 		var hr = hrHist.next().heartRate;
