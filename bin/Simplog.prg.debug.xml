@@ -58,97 +58,102 @@
 <entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="125" pc="268436599" symbol="drawDay"/>
 <entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="126" pc="268436643" symbol="drawDay"/>
 <entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="127" pc="268436710" symbol="drawDay"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="134" pc="268436811" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="135" pc="268436815" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="136" pc="268436847" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="137" pc="268436858" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="139" pc="268436908" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="141" pc="268436958" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="143" pc="268437008" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="145" pc="268437058" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="147" pc="268437097" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="149" pc="268437133" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="150" pc="268437184" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="151" pc="268437220" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="152" pc="268437237" symbol="drawBattery"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="155" pc="268437289" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="156" pc="268437293" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="157" pc="268437310" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="158" pc="268437327" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="160" pc="268437352" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="161" pc="268437377" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="177" pc="268438593" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="178" pc="268438629" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="181" pc="268438643" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="182" pc="268438679" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="184" pc="268438712" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="185" pc="268438748" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="186" pc="268438778" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="188" pc="268438859" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="189" pc="268438951" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="193" pc="268439019" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="194" pc="268439044" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="210" pc="268440236" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="211" pc="268440272" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="214" pc="268440286" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="215" pc="268440322" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="217" pc="268440355" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="218" pc="268440391" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="219" pc="268440421" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="221" pc="268440502" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="222" pc="268440594" symbol="drawHands"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="225" pc="268440663" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="226" pc="268440667" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="227" pc="268440683" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="228" pc="268440699" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="230" pc="268440728" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="231" pc="268440752" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="232" pc="268440788" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="233" pc="268440808" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="234" pc="268441062" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="235" pc="268441092" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="242" pc="268441290" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="243" pc="268441313" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="246" pc="268441333" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="248" pc="268441356" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="249" pc="268441367" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="250" pc="268441416" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="251" pc="268441452" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="252" pc="268441472" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="253" pc="268441491" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="257" pc="268441561" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="258" pc="268441597" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="263" pc="268441735" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="264" pc="268441764" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="265" pc="268441788" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="266" pc="268441807" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="267" pc="268441828" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="268" pc="268441864" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="269" pc="268441901" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="270" pc="268441958" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="274" pc="268442062" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="275" pc="268442098" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="278" pc="268442161" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="279" pc="268442184" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="280" pc="268442191" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="281" pc="268442227" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="282" pc="268442247" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="283" pc="268442495" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="284" pc="268442525" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="289" pc="268442720" symbol="drawMessages"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="295" pc="268442825" symbol="drawGraph"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="5" pc="268442830" symbol="initialize"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="6" pc="268442834" symbol="initialize"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="10" pc="268442853" symbol="onStart"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="14" pc="268442858" symbol="onStop"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="18" pc="268442863" symbol="getInitialView"/>
-<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="19" pc="268442867" symbol="getInitialView"/>
-<entry filename="Rez" lineNum="19" pc="268442905" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="21" pc="268442909" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="22" pc="268443072" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="23" pc="268443097" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="24" pc="268443149" symbol="WatchFace"/>
-<entry filename="Rez" lineNum="27" pc="268443195" symbol="WatchFace"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="134" pc="268436814" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="135" pc="268436818" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="136" pc="268436850" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="137" pc="268436861" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="139" pc="268436911" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="141" pc="268436961" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="143" pc="268437011" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="145" pc="268437061" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="147" pc="268437100" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="149" pc="268437136" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="150" pc="268437187" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="151" pc="268437223" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="152" pc="268437240" symbol="drawBattery"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="155" pc="268437292" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="156" pc="268437296" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="157" pc="268437313" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="158" pc="268437330" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="160" pc="268437355" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="161" pc="268437380" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="177" pc="268438596" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="178" pc="268438632" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="181" pc="268438646" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="182" pc="268438682" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="184" pc="268438715" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="185" pc="268438751" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="186" pc="268438781" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="188" pc="268438862" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="189" pc="268438954" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="193" pc="268439022" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="194" pc="268439047" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="210" pc="268440239" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="211" pc="268440275" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="214" pc="268440289" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="215" pc="268440325" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="217" pc="268440358" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="218" pc="268440394" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="219" pc="268440424" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="221" pc="268440505" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="222" pc="268440597" symbol="drawHands"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="225" pc="268440666" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="226" pc="268440670" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="227" pc="268440686" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="228" pc="268440702" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="230" pc="268440731" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="231" pc="268440755" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="232" pc="268440791" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="233" pc="268440811" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="234" pc="268441065" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="235" pc="268441095" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="244" pc="268441293" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="245" pc="268441316" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="246" pc="268441323" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="247" pc="268441343" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="248" pc="268441354" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="249" pc="268441390" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="250" pc="268441427" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="254" pc="268441481" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="256" pc="268441504" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="257" pc="268441515" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="258" pc="268441564" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="259" pc="268441600" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="260" pc="268441620" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="261" pc="268441639" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="265" pc="268441709" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="266" pc="268441745" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="271" pc="268441883" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="272" pc="268441912" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="273" pc="268441936" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="274" pc="268441955" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="275" pc="268441976" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="276" pc="268442012" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="277" pc="268442049" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="278" pc="268442106" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="282" pc="268442210" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="283" pc="268442246" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="286" pc="268442309" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="287" pc="268442332" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="288" pc="268442339" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="289" pc="268442375" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="290" pc="268442395" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="291" pc="268442643" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="292" pc="268442673" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="297" pc="268442868" symbol="drawMessages"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogView.mc" lineNum="303" pc="268442973" symbol="drawGraph"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="5" pc="268442978" symbol="initialize"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="6" pc="268442982" symbol="initialize"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="10" pc="268443001" symbol="onStart"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="14" pc="268443006" symbol="onStop"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="18" pc="268443011" symbol="getInitialView"/>
+<entry filename="/Users/jsteinkamp/eclipse/workspace/Simplog/source/SimplogApp.mc" lineNum="19" pc="268443015" symbol="getInitialView"/>
+<entry filename="Rez" lineNum="20" pc="268443053" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="22" pc="268443057" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="23" pc="268443220" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="24" pc="268443245" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="25" pc="268443297" symbol="WatchFace"/>
+<entry filename="Rez" lineNum="28" pc="268443343" symbol="WatchFace"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8389124" method="true" symbol="onUpdate"/>
@@ -170,11 +175,11 @@
 <entry id="8389123" method="true" symbol="onShow"/>
 <entry id="8" object="true" symbol="SimplogView"/>
 <entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="23" symbol="AppName"/>
+<entry field="true" id="24" symbol="AppName"/>
 <entry id="9" object="true" symbol="SimplogApp"/>
 <entry id="8389375" method="true" symbol="WatchFace"/>
 <entry field="true" id="21" symbol="heart"/>
-<entry field="true" id="22" symbol="LauncherIcon"/>
+<entry field="true" id="23" symbol="LauncherIcon"/>
 <entry id="12" method="true" symbol="erase"/>
 <entry id="8389281" method="true" symbol="onStop"/>
 <entry id="8389065" symbol="locY"/>
@@ -183,6 +188,7 @@
 <entry id="8389122" method="true" symbol="onLayout"/>
 <entry id="14" method="true" symbol="drawDay"/>
 <entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="22" symbol="alarm"/>
 <entry id="8389376" method="true" symbol="onEnterSleep"/>
 <entry id="8389348" symbol="font"/>
 <entry id="8389347" symbol="color"/>
@@ -207,34 +213,35 @@
 <entry endPc="268436514" name="innerX" stackId="4" startPc="268435834"/>
 <entry endPc="268436514" name="length" stackId="2" startPc="268435834"/>
 <entry endPc="268436514" name="angle" stackId="3" startPc="268435834"/>
-<entry endPc="268436810" name="dateStr" stackId="5" startPc="268436519"/>
-<entry endPc="268436810" name="wday" stackId="3" startPc="268436519"/>
-<entry endPc="268436810" name="dom" stackId="4" startPc="268436519"/>
-<entry endPc="268437288" name="battStat" stackId="2" startPc="268436815"/>
-<entry endPc="268438859" name="i" stackId="6" startPc="268438778"/>
-<entry endPc="268440502" name="i" stackId="8" startPc="268440421"/>
-<entry endPc="268440662" name="handHour" stackId="5" startPc="268437293"/>
-<entry endPc="268440662" name="dayMinutes" stackId="3" startPc="268437293"/>
-<entry endPc="268440662" name="time" stackId="2" startPc="268437293"/>
-<entry endPc="268440662" name="handMin" stackId="7" startPc="268437293"/>
-<entry endPc="268440662" name="angle" stackId="4" startPc="268437293"/>
-<entry endPc="268441287" name="i" stackId="6" startPc="268441092"/>
-<entry endPc="268441287" name="btSymbol" stackId="5" startPc="268440752"/>
-<entry endPc="268441732" name="width" stackId="10" startPc="268441367"/>
-<entry endPc="268441732" name="digits" stackId="9" startPc="268441367"/>
-<entry endPc="268442059" name="image" stackId="13" startPc="268441828"/>
-<entry endPc="268442720" name="i" stackId="16" startPc="268442525"/>
-<entry endPc="268442821" name="mtSymbol" stackId="15" startPc="268442191"/>
-<entry endPc="268442824" name="altitude" stackId="14" startPc="268440667"/>
-<entry endPc="268442824" name="messageCount" stackId="8" startPc="268440667"/>
-<entry endPc="268442824" name="offsetX" stackId="2" startPc="268440667"/>
-<entry endPc="268442824" name="hrHist" stackId="11" startPc="268440667"/>
-<entry endPc="268442824" name="hr" stackId="12" startPc="268440667"/>
-<entry endPc="268442824" name="fontHeight" stackId="4" startPc="268440667"/>
-<entry endPc="268442824" name="alarmCount" stackId="7" startPc="268440667"/>
-<entry endPc="268442824" name="offsetY" stackId="3" startPc="268440667"/>
-<entry endPc="268443212" name="rez_cmp_local_bitmap_TimeLabel" stackId="2" startPc="268442909"/>
-<entry endPc="268443212" name="rez_cmp_local_bitmap_TimeLabel_fontHeight" stackId="3" startPc="268442909"/>
+<entry endPc="268436813" name="dateStr" stackId="5" startPc="268436519"/>
+<entry endPc="268436813" name="wday" stackId="3" startPc="268436519"/>
+<entry endPc="268436813" name="dom" stackId="4" startPc="268436519"/>
+<entry endPc="268437291" name="battStat" stackId="2" startPc="268436818"/>
+<entry endPc="268438862" name="i" stackId="6" startPc="268438781"/>
+<entry endPc="268440505" name="i" stackId="8" startPc="268440424"/>
+<entry endPc="268440665" name="handHour" stackId="5" startPc="268437296"/>
+<entry endPc="268440665" name="dayMinutes" stackId="3" startPc="268437296"/>
+<entry endPc="268440665" name="time" stackId="2" startPc="268437296"/>
+<entry endPc="268440665" name="handMin" stackId="7" startPc="268437296"/>
+<entry endPc="268440665" name="angle" stackId="4" startPc="268437296"/>
+<entry endPc="268441290" name="i" stackId="6" startPc="268441095"/>
+<entry endPc="268441290" name="btSymbol" stackId="5" startPc="268440755"/>
+<entry endPc="268441478" name="image" stackId="8" startPc="268441354"/>
+<entry endPc="268441880" name="width" stackId="11" startPc="268441515"/>
+<entry endPc="268441880" name="digits" stackId="10" startPc="268441515"/>
+<entry endPc="268442207" name="image" stackId="14" startPc="268441976"/>
+<entry endPc="268442868" name="i" stackId="17" startPc="268442673"/>
+<entry endPc="268442969" name="mtSymbol" stackId="16" startPc="268442339"/>
+<entry endPc="268442972" name="altitude" stackId="15" startPc="268440670"/>
+<entry endPc="268442972" name="messageCount" stackId="9" startPc="268440670"/>
+<entry endPc="268442972" name="offsetX" stackId="2" startPc="268440670"/>
+<entry endPc="268442972" name="hrHist" stackId="12" startPc="268440670"/>
+<entry endPc="268442972" name="hr" stackId="13" startPc="268440670"/>
+<entry endPc="268442972" name="fontHeight" stackId="4" startPc="268440670"/>
+<entry endPc="268442972" name="alarmCount" stackId="7" startPc="268440670"/>
+<entry endPc="268442972" name="offsetY" stackId="3" startPc="268440670"/>
+<entry endPc="268443360" name="rez_cmp_local_bitmap_TimeLabel" stackId="2" startPc="268443057"/>
+<entry endPc="268443360" name="rez_cmp_local_bitmap_TimeLabel_fontHeight" stackId="3" startPc="268443057"/>
 </localVars>
 <annotations/>
 <functions>

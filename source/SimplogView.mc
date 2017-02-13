@@ -116,7 +116,7 @@ class SimplogView extends Ui.WatchFace {
 		    dc.drawLine(innerX, innerY, outerX, outerY);
 		}
 	}
-	
+
 	// f_js_20160826
 	// draw the weekday and day of the month at hour 3
 	function drawDay(dc, date) {
@@ -124,10 +124,10 @@ class SimplogView extends Ui.WatchFace {
 		var wday = Lang.format("$1$", [date.day_of_week]);
 		var dom  = Lang.format("$1$", [date.day]);
 		var dateStr = Lang.format("$1$ $2$", [wday.substring(0, 2), dom]);
-		dc.drawText(2*radius-2, centerY - Gfx.getFontHeight(Gfx.FONT_TINY)/2,
+		dc.drawText(centerX + radius - 2, centerY - Gfx.getFontHeight(Gfx.FONT_TINY)/2,
 		            Gfx.FONT_TINY, dateStr, Gfx.TEXT_JUSTIFY_RIGHT);
 	}
-	
+
 	// f_js_20160826
 	// draw the battery status at hour 12
 	// >80% white; >50 blue; >20% green; >10% yellow; >5% orange; <5% red
@@ -151,12 +151,12 @@ class SimplogView extends Ui.WatchFace {
 		dc.setPenWidth(3);
 		dc.drawCircle(centerX, centerY, radius*symbolScale + 2);
 	}
-	
+
 	function drawHands(dc) {
 		dc.setPenWidth(1);
 		var time = Sys.getClockTime();
 		var dayMinutes = time.min + time.hour * 60;
-		
+
 		var angle = Math.PI * dayMinutes / 360;
 		var handHour = [ [ centerX - Math.sin(angle) * radiusBattery * 2,
 						   centerY + Math.cos(angle) * radiusBattery * 2],
@@ -187,7 +187,7 @@ class SimplogView extends Ui.WatchFace {
 		}
 		dc.drawLine(handHour[0][0], handHour[0][1], handHour[handHour.size()-1][0], handHour[handHour.size()-1][1]);
 		dc.drawLine(handHour[0][0], handHour[0][1], handHour[4][0], handHour[4][1]);
-		
+
 		// draw two polygons per hand: one larger gray
 		// minute hand
 		angle = Math.PI * dayMinutes / 30;
@@ -221,10 +221,10 @@ class SimplogView extends Ui.WatchFace {
 		dc.drawLine(handMin[0][0], handMin[0][1], handMin[handMin.size()-1][0], handMin[handMin.size()-1][1]);
 		dc.drawLine(handMin[0][0], handMin[0][1], handMin[4][0], handMin[4][1]);
 	}
-	
+
 	function drawMessages(dc) {
 		var offsetX = 3 * symbolScale;
-		var offsetY = 6 * symbolScale;
+		var offsetY = 5 * symbolScale;
 		var fontHeight = Gfx.getFontHeight(Gfx.FONT_XTINY);
 		// is the phone connected?
 		if (Sys.getDeviceSettings().phoneConnected) {
@@ -239,9 +239,17 @@ class SimplogView extends Ui.WatchFace {
 			}
 		}
 
+		// f_js_20170211
+		// is an alarm set?
 		var alarmCount = Sys.getDeviceSettings().alarmCount;
+		alarmCount = 1;
 		System.print(alarmCount);
-		
+		if (alarmCount > 0) {
+			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+			var image = Ui.loadResource(Rez.Drawables.alarm);
+			dc.drawBitmap(centerX - 6, centerY - radius/2.0 , image);
+			
+		}
 
 		var messageCount = Sys.getDeviceSettings().notificationCount;
 		// number of notifications
@@ -274,7 +282,7 @@ class SimplogView extends Ui.WatchFace {
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 			dc.drawText(18, centerY - fontHeight/2, Gfx.FONT_TINY, 9, Gfx.TEXT_JUSTIFY_CENTER);
 		}
-		
+
 		var altitude = Act.getActivityInfo().altitude;
 		if (altitude != null) {
 			dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
@@ -294,7 +302,7 @@ class SimplogView extends Ui.WatchFace {
 
 	function drawGraph(dc) {
 		// HR number and history colored by bereich
-		
+
 		// elevation (grey)
 	}
 }
