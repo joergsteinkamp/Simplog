@@ -242,7 +242,7 @@ class SimplogView extends Ui.WatchFace {
 		// f_js_20170211
 		// is an alarm set?
 		var alarmCount = Sys.getDeviceSettings().alarmCount;
-		alarmCount = 1;
+		//alarmCount=1;
 		System.print(alarmCount);
 		if (alarmCount > 0) {
 			dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
@@ -252,6 +252,7 @@ class SimplogView extends Ui.WatchFace {
 		}
 
 		var messageCount = Sys.getDeviceSettings().notificationCount;
+		//messageCount = 17;
 		// number of notifications
 		if (messageCount > 0) {
 			var digits = Math.floor(1+Math.log(messageCount, 10));
