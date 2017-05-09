@@ -1,13 +1,11 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
-using Toybox.Application as App;
 
 // js_mz_20160826
 using Toybox.Time as Time;
 using Toybox.Time.Gregorian as Cal;
 
 class SimplogView extends Ui.WatchFace {
-
 	// f_js_20160826
 	// display properties
 	hidden var centerX, centerY, radius;
@@ -15,6 +13,8 @@ class SimplogView extends Ui.WatchFace {
 	hidden var radiusBattery = 8;
 	// scale factor for symbols
 	hidden var symbolScale = 1;
+
+	hidden var sunTimes;
 
     function initialize() {
         WatchFace.initialize();
@@ -50,6 +50,8 @@ class SimplogView extends Ui.WatchFace {
 
 		drawHands(dc);
 		drawBattery(dc);
+
+		drawSun(dc, time);
 
 		// draw info fields on top, so it is not hidden by the watch hands
 		drawMessages(dc);
