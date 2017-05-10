@@ -1,13 +1,12 @@
-using Toybox.Time as Time;
+//using Toybox.Time as Time;
 using Toybox.Time.Gregorian as Cal;
 using Toybox.Math as Math;
-using Toybox.Activity as Act;
 using Toybox.Graphics as Gfx;
 
-function drawSun(dc, time) {
+function drawSun(dc, time, location, altitude) {
 	//update only once an hour
 	if (sunTimes == null || Cal.info(time, Time.FORMAT_SHORT).min == 0) {
-	   sunTimes = sunRiseSet(time);
+	   sunTimes = sunRiseSet(time, location, altitude);
 	}
 	var sunRise = Cal.info(sunTimes[0], Cal.FORMAT_SHORT);
     var sunSet = Cal.info(sunTimes[1], Cal.FORMAT_SHORT);
@@ -22,13 +21,11 @@ function drawSun(dc, time) {
 	
 }
 
-function sunRiseSet(time) {
+function sunRiseSet(time, location, altitude) {
 	var JulianOffset = 2451545.0;
 	var deg2rad = Math.PI / 180.0;
 	var tilt = 23.4397;
 	// get the location infos
-	var altitude = Act.getActivityInfo().altitude;
-	var location = Act.getActivityInfo().currentLocation;
 	var long = 8.0;
 	var lat  = 50.0;
 	if (location != null) {

@@ -6,7 +6,7 @@ function drawHands(dc) {
 	var time = Sys.getClockTime();
 	var dayMinutes = time.min + time.hour * 60;
 
-	var angle = Math.PI * dayMinutes / 360;
+	var angle = Math.PI * dayMinutes / 360.0;
 	var handHour = [ [ centerX - Math.sin(angle) * radiusBattery * 2,
 					   centerY + Math.cos(angle) * radiusBattery * 2],
 					 [ centerX - Math.sin(angle) * radiusBattery * 1.75 + Math.cos(angle) * radiusBattery * 0.875,
@@ -26,9 +26,9 @@ function drawHands(dc) {
 	dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
 	dc.fillPolygon(handHour);
 
-		// hardcoded index!
+	// hardcoded index!
 	dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-	dc.fillPolygon(handHour.slice(0,5));
+	dc.fillPolygon(handHour.slice(0, 5));
 
 	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 	for (var i = 0; i < handHour.size() - 1; i++) {
@@ -39,7 +39,7 @@ function drawHands(dc) {
 
 	// draw two polygons per hand: one larger gray
 	// minute hand
-	angle = Math.PI * dayMinutes / 30;
+	angle = Math.PI * dayMinutes / 30.0;
 	var handMin = [ [ centerX - Math.sin(angle) * radiusBattery * 2.5,
 					  centerY + Math.cos(angle) * radiusBattery * 2.5],
 					[ centerX - Math.sin(angle) * radiusBattery * 2.125 + Math.cos(angle) * radiusBattery * 0.625,
@@ -61,12 +61,12 @@ function drawHands(dc) {
 
 	// hardcoded index!
 	dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-	dc.fillPolygon(handMin.slice(0,5));
+	dc.fillPolygon(handMin.slice(0, 5));
 
 	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
 	for (var i = 0; i < handMin.size() - 1; i++) {
 		dc.drawLine(handMin[i][0], handMin[i][1], handMin[i+1][0], handMin[i+1][1]);
 	}
-	dc.drawLine(handMin[0][0], handMin[0][1], handMin[handMin.size()-1][0], handMin[handMin.size()-1][1]);
+	dc.drawLine(handMin[0][0], handMin[0][1], handMin[handMin.size() - 1][0], handMin[handMin.size() - 1][1]);
 	dc.drawLine(handMin[0][0], handMin[0][1], handMin[4][0], handMin[4][1]);
 }

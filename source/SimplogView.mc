@@ -3,7 +3,9 @@ using Toybox.Graphics as Gfx;
 
 // js_mz_20160826
 using Toybox.Time as Time;
-using Toybox.Time.Gregorian as Cal;
+using Toybox.Activity as Act;
+using Toybox.ActivityMonitor as AM;
+using Toybox.System as Sys;
 
 class SimplogView extends Ui.WatchFace {
 	// f_js_20160826
@@ -39,22 +41,29 @@ class SimplogView extends Ui.WatchFace {
     function onUpdate(dc) {
         // f_js_201608026
         var time = Time.now();
-        var date = Cal.info(time, Time.FORMAT_MEDIUM);
+		var altitude = Act.getActivityInfo().altitude;
+		var location = Act.getActivityInfo().currentLocation;
+
+		var phoneConnected = Sys.getDeviceSettings().phoneConnected;
+		var alarmCount = Sys.getDeviceSettings().alarmCount;
+		var notificationCount = Sys.getDeviceSettings().notificationCount;
+		var hrHist =  AM.getHeartRateHistory(1, true);
+		var heartRate = hrHist.next().heartRate;
 
         // clear the display
         erase(dc);
 
         // draw the watch components
         drawTicks(dc);
-		drawDay(dc, date);
+		drawDay(dc, time);
 
 		drawHands(dc);
 		drawBattery(dc);
 
-		drawSun(dc, time);
+		drawSun(dc, time, location, altitude);
 
 		// draw info fields on top, so it is not hidden by the watch hands
-		drawMessages(dc);
+		drawMessages(dc, phoneConnected, alarmCount, notificationCount, heartRate, altitude);
     }
 
     // Called when this View is removed from the screen. Save the
