@@ -1,4 +1,3 @@
-// f_js_20160826 
 // draw the minute ticks and labels
 using Toybox.Graphics as Gfx;
 

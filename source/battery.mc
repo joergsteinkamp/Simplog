@@ -1,4 +1,3 @@
-// f_js_20160826
 // draw the battery status at hour 12
 // >80% white; >50 blue; >20% green; >10% yellow; >5% orange; <5% red
 using Toybox.Graphics as Gfx;

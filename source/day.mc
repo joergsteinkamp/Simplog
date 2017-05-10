@@ -1,4 +1,3 @@
-// f_js_20160826
 // draw the weekday and day of the month at hour 3
 using Toybox.Graphics as Gfx;
 using Toybox.Lang as Lang;

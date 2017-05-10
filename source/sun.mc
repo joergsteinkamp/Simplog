@@ -14,11 +14,6 @@ function drawSun(dc, time, location, altitude) {
 	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
 	dc.drawText(centerX, centerY + radius/5, Gfx.FONT_TINY,
 				Lang.format("$1$:$2$ $3$:$4$", [sunRise.hour, sunRise.min, sunSet.hour, sunSet.min]), Gfx.TEXT_JUSTIFY_CENTER);
-	
-	//System.println(Lang.format("$1$:$2$", [sunRise.hour, sunRise.min]));
-	//System.println(Lang.format("$1$:$2$", [sunSet.hour, sunSet.min]));
-	
-	
 }
 
 function sunRiseSet(time, location, altitude) {
@@ -34,11 +29,6 @@ function sunRiseSet(time, location, altitude) {
 	} else {
 		System.println("sunRiseSet: Cannot get current location!");
 	}
-	// get the time and time zone infos
-	//var ltime = Cal.info(time, Time.FORMAT_SHORT);
-	//var utc = Cal.utcInfo(time, Time.FORMAT_SHORT);
-	//var ltimeHourOffset = ltime.hour - utc.hour;
-	//var ltimeMinOffset  = ltime.min - utc.min;
 
     var refDate = Cal.moment({ :year=>2000, :month=>1, :day=>1, :hour=>12, :minute=>0, :second=>0 });
 
@@ -77,7 +67,5 @@ function sunRiseSet(time, location, altitude) {
 	dt = (Jtransit + Math.acos(omega) / (2.0 * Math.PI)) * Cal.SECONDS_PER_DAY;
 	var sunSet = refDate.add(Cal.duration({ :seconds => dt}));
 	
-	//var sunRise = refDate.value() + (Jtransit - Math.acos(omega)/(2.0 * Math.PI)) * Cal.SECONDS_PER_DAY;
-    //var sunSet  = refDate.value() + (Jtransit + Math.acos(omega)/(2.0 * Math.PI)) * Cal.SECONDS_PER_DAY;
 	return([sunRise, sunSet]);
 }

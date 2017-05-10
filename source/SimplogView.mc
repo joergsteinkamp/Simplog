@@ -1,7 +1,5 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
-
-// js_mz_20160826
 using Toybox.Time as Time;
 using Toybox.Activity as Act;
 using Toybox.ActivityMonitor as AM;
