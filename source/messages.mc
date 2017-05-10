@@ -42,18 +42,23 @@ function drawMessages(dc, phoneConnected, alarmCount, notificationCount, heartRa
 					Gfx.FONT_XTINY, notificationCount, Gfx.TEXT_JUSTIFY_VCENTER);
 	}
 
+	System.println(radius);
+
 	// Heart rate
 	fontHeight = Gfx.getFontHeight(Gfx.FONT_TINY);
 	if (heartRate != null && heartRate < 250) {
 		dc.setColor(Gfx.COLOR_ORANGE, Gfx.COLOR_TRANSPARENT);
 		var image = Ui.loadResource(Rez.Drawables.heart);
-		dc.drawBitmap(centerX / 2.5 - 2, centerY - radius / 3.5 , image);
-		dc.drawText(centerX / 2.5 + 15,
-					centerY - radius / 3.5 - 5,
-					Gfx.FONT_TINY, heartRate.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
-	} else {
-		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-		dc.drawText(18, centerY - fontHeight / 2, Gfx.FONT_TINY, 9, Gfx.TEXT_JUSTIFY_CENTER);
+		//dc.drawBitmap(centerX / 2.5 - 2, centerY - radius / 3.5 , image);
+		//dc.drawText(centerX / 2.5 + 15,
+		//			centerY - radius / 3.5 - 5,
+		//			Gfx.FONT_TINY, heartRate.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
+		dc.drawBitmap(centerX - radiusBattery - radius / 7.4, 
+					  centerY - radiusBattery - radius / 5.7, image);
+		dc.drawText(centerX - radiusBattery - radius / 7.4 - 3,
+					centerY - radiusBattery - radius / 5.7 - 4,
+					Gfx.FONT_TINY, heartRate.format("%1.0f"), Gfx.TEXT_JUSTIFY_RIGHT);
+		
 	}
 
 	// altitude
@@ -62,13 +67,21 @@ function drawMessages(dc, phoneConnected, alarmCount, notificationCount, heartRa
 		dc.setPenWidth(symbolScale);
 		var mtSymbol = [ [0, 10], [4, 2], [6, 6], [5, 4], [7, 0], [13, 11] ];
 		for (var i = 0; i < mtSymbol.size() - 1; i++) {
-			dc.drawLine(symbolScale * mtSymbol[i][0] + centerX / 2.5,
-			            symbolScale * mtSymbol[i][1] + centerY - radius / 2.2,
-			            symbolScale * mtSymbol[i + 1][0] + centerX / 2.5,
-			            symbolScale * mtSymbol[i + 1][1] + centerY - radius / 2.2);
+			//dc.drawLine(symbolScale * mtSymbol[i][0] + centerX / 2.5,
+			//            symbolScale * mtSymbol[i][1] + centerY - radius / 2.2,
+			//            symbolScale * mtSymbol[i + 1][0] + centerX / 2.5,
+			//            symbolScale * mtSymbol[i + 1][1] + centerY - radius / 2.2);
+			dc.drawLine(symbolScale * mtSymbol[i][0] + centerX + radiusBattery / 2,
+			            symbolScale * mtSymbol[i][1] + centerY - radius / 5.7 - 8,
+			            symbolScale * mtSymbol[i + 1][0] + centerX + radiusBattery / 2,
+			            symbolScale * mtSymbol[i + 1][1] + centerY - radius / 5.7 - 8);
+			
 		}
-		dc.drawText(centerX/2.5 + 15,
-					centerY - radius / 2.2 - 6,
+		//dc.drawText(centerX/2.5 + 15,
+		//			centerY - radius / 2.2 - 6,
+		//			Gfx.FONT_TINY, altitude.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
+		dc.drawText(centerX + radiusBattery / 2 + 15,
+					centerY - radius / 5.7 - 9 - fontHeight / 4,
 					Gfx.FONT_TINY, altitude.format("%1.0f"), Gfx.TEXT_JUSTIFY_LEFT);
 	}
 }

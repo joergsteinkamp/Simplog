@@ -1,12 +1,12 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Time as Time;
+using Toybox.Time.Gregorian as Cal;
 using Toybox.Activity as Act;
 using Toybox.ActivityMonitor as AM;
 using Toybox.System as Sys;
 
 class SimplogView extends Ui.WatchFace {
-	// f_js_20160826
 	// display properties
 	hidden var centerX, centerY, radius;
 	// size of colored battery indicator (center point) 
@@ -22,7 +22,6 @@ class SimplogView extends Ui.WatchFace {
 
     // Load your resources here
     function onLayout(dc) {
-    	// f_js_20160826
     	centerX = dc.getWidth() / 2;
     	centerY = dc.getHeight() / 2;
     	radius = centerX < centerY ? centerX : centerY;
@@ -37,7 +36,6 @@ class SimplogView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
-        // f_js_201608026
         var time = Time.now();
 		var altitude = Act.getActivityInfo().altitude;
 		var location = Act.getActivityInfo().currentLocation;
@@ -45,8 +43,18 @@ class SimplogView extends Ui.WatchFace {
 		var phoneConnected = Sys.getDeviceSettings().phoneConnected;
 		var alarmCount = Sys.getDeviceSettings().alarmCount;
 		var notificationCount = Sys.getDeviceSettings().notificationCount;
-		var hrHist =  AM.getHeartRateHistory(1, true);
+		var hrHist =  AM.getHeartRateHistory(Cal.duration({ :minutes => 1}), true);
 		var heartRate = hrHist.next().heartRate;
+
+		var amInfo = AM.getInfo();
+		System.println(amInfo.moveBarLevel);
+		System.println(AM.MOVE_BAR_LEVEL_MAX);
+		System.println(AM.MOVE_BAR_LEVEL_MIN);
+		System.println(amInfo.steps);
+		System.println(amInfo.stepGoal);
+		//System.println(amInfo.floorsClimbed);
+		//System.println(amInfo.floorsClimbedGoal);
+		
 
         // clear the display
         erase(dc);
@@ -78,7 +86,6 @@ class SimplogView extends Ui.WatchFace {
     function onEnterSleep() {
     }
 
-	// f_js_20160826
 	// reset the display
 	function erase(dc) {
 		dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
