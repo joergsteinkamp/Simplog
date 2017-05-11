@@ -39,6 +39,9 @@ function drawHands(dc) {
 
 	// draw two polygons per hand: one larger gray
 	// minute hand
+	//System.println(Math.sin(angle) * radius * 0.8 + Math.cos(angle) * radiusBattery * 0.375);
+	//System.println(Math.round(Math.sin(angle) * radius * 0.8 + Math.cos(angle) * radiusBattery * 0.375));
+	
 	angle = Math.PI * dayMinutes / 30.0;
 	var handMin = [ [ centerX - Math.sin(angle) * radiusBattery * 2.5,
 					  centerY + Math.cos(angle) * radiusBattery * 2.5],

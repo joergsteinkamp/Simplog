@@ -68,8 +68,28 @@ class SimplogView extends Ui.WatchFace {
 
 		drawSun(dc, time, location, altitude);
 
-		// draw info fields on top, so it is not hidden by the watch hands
-		drawMessages(dc, phoneConnected, alarmCount, notificationCount, heartRate, altitude);
+		phoneConnected = true;
+		alarmCount = 1;
+		notificationCount=99;
+		altitude=200;
+
+		// draw info fields on top, so they are not covered by the watch hands
+		if (phoneConnected) {
+			drawPhoneConnected(dc);
+		}
+		if (alarmCount > 0) {
+			drawAlarmCount(dc, alarmCount);
+		}
+		if (notificationCount > 0) {
+			drawNotificationCount(dc, notificationCount);
+		}
+		if (heartRate != null && heartRate < 250) {
+			drawHeartRate(dc, heartRate);
+		}
+		if (altitude != null) {
+			drawAltitude(dc, altitude);
+		}
+		//drawMessages(dc, phoneConnected, alarmCount, notificationCount, heartRate, altitude);
     }
 
     // Called when this View is removed from the screen. Save the

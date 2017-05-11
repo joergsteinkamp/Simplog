@@ -5,15 +5,20 @@ using Toybox.Graphics as Gfx;
 
 function drawSun(dc, time, location, altitude) {
 	//update only once an hour
-	if (sunTimes == null || Cal.info(time, Time.FORMAT_SHORT).min == 0) {
+	if (sunTimes == null || Cal.info(time, Time.FORMAT_SHORT).min % 60 == 0) {
 	   sunTimes = sunRiseSet(time, location, altitude);
 	}
 	var sunRise = Cal.info(sunTimes[0], Cal.FORMAT_SHORT);
     var sunSet = Cal.info(sunTimes[1], Cal.FORMAT_SHORT);
 	
 	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
-	dc.drawText(centerX, centerY + radius/5, Gfx.FONT_TINY,
-				Lang.format("$1$:$2$ $3$:$4$", [sunRise.hour, sunRise.min, sunSet.hour, sunSet.min]), Gfx.TEXT_JUSTIFY_CENTER);
+	if (time.greaterThan(sunTimes[0])) {
+		dc.drawText(centerX, centerY + radius / 3, Gfx.FONT_TINY,
+				Lang.format("$1$:$2$", [sunSet.hour.format("%02i"), sunSet.min.format("%02i")]), Gfx.TEXT_JUSTIFY_CENTER);
+	} else {
+		dc.drawText(centerX, centerY + radius / 3, Gfx.FONT_TINY,
+				Lang.format("$1$:$2$", [sunRise.hour.format("%02i"), sunRise.min.format("%02i")]), Gfx.TEXT_JUSTIFY_CENTER);	
+	}
 }
 
 function sunRiseSet(time, location, altitude) {
