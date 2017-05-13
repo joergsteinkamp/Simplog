@@ -15,7 +15,7 @@ function drawTicks(dc) {
 	for (var i = 1; i <= 60; i++) {
 		angle = Math.PI * i / 30;
 		// skip hours 12 and 3
-		if ((i > 13 && i < 17) || i==0) {
+		if ((i > 13 && i < 17) || i == 0) {
 			continue;
 		} else if (i % 5 == 0) {
 			dc.setPenWidth(3);

@@ -44,17 +44,33 @@ class SimplogView extends Ui.WatchFace {
 		var alarmCount = Sys.getDeviceSettings().alarmCount;
 		var notificationCount = Sys.getDeviceSettings().notificationCount;
 		var hrHist =  AM.getHeartRateHistory(Cal.duration({ :minutes => 1}), true);
-		var heartRate = hrHist.next().heartRate;
+		var heartRateSample = hrHist.next();
+		var heartRate = 0.0;
+		var nHeartRate = 0;
+		while (heartRateSample != null && nHeartRate < 61) {
+			heartRate += heartRateSample.heartRate;
+			heartRateSample = hrHist.next();
+			nHeartRate++;
+		}
+		heartRate /= nHeartRate;
+		//System.println(heartRate);
 
-		var amInfo = AM.getInfo();
-		System.println(amInfo.moveBarLevel);
-		System.println(AM.MOVE_BAR_LEVEL_MAX);
-		System.println(AM.MOVE_BAR_LEVEL_MIN);
-		System.println(amInfo.steps);
-		System.println(amInfo.stepGoal);
+		//phoneConnected = true;
+		//alarmCount = 1;
+		//notificationCount=19;
+		//altitude=200;
+
+		//var amInfo = AM.getInfo();
+		//System.println(amInfo.moveBarLevel);
+		//System.println(AM.MOVE_BAR_LEVEL_MAX);
+		//System.println(AM.MOVE_BAR_LEVEL_MIN);
+		//System.println(amInfo.steps);
+		//System.println(amInfo.stepGoal);
 		//System.println(amInfo.floorsClimbed);
 		//System.println(amInfo.floorsClimbedGoal);
-		
+		//var DS = System.getDeviceSettings();
+		//System.println(DS.screenShape);
+		//System.println(DS.partNumber);
 
         // clear the display
         erase(dc);
@@ -63,15 +79,13 @@ class SimplogView extends Ui.WatchFace {
         drawTicks(dc);
 		drawDay(dc, time);
 
+		// draw the notification count bellow the watch hands 
+		if (notificationCount > 0) {
+			drawNotificationCount(dc, notificationCount);
+		}
+
 		drawHands(dc);
 		drawBattery(dc);
-
-		drawSun(dc, time, location, altitude);
-
-		phoneConnected = true;
-		alarmCount = 1;
-		notificationCount=99;
-		altitude=200;
 
 		// draw info fields on top, so they are not covered by the watch hands
 		if (phoneConnected) {
@@ -80,16 +94,15 @@ class SimplogView extends Ui.WatchFace {
 		if (alarmCount > 0) {
 			drawAlarmCount(dc, alarmCount);
 		}
-		if (notificationCount > 0) {
-			drawNotificationCount(dc, notificationCount);
-		}
-		if (heartRate != null && heartRate < 250) {
+		if (heartRate != null && heartRate < 250 && heartRate > 0) {
 			drawHeartRate(dc, heartRate);
 		}
 		if (altitude != null) {
 			drawAltitude(dc, altitude);
 		}
-		//drawMessages(dc, phoneConnected, alarmCount, notificationCount, heartRate, altitude);
+		//if (location != null) {
+			drawSun(dc, time, location, altitude);
+		//}
     }
 
     // Called when this View is removed from the screen. Save the
