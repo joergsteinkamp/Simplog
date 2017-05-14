@@ -5,6 +5,8 @@ using Toybox.Time.Gregorian as Cal;
 using Toybox.Activity as Act;
 using Toybox.ActivityMonitor as AM;
 using Toybox.System as Sys;
+using Toybox.Math as Math;
+using Toybox.Lang as Lang;
 
 class SimplogView extends Ui.WatchFace {
 	// display properties
@@ -43,16 +45,16 @@ class SimplogView extends Ui.WatchFace {
 		var phoneConnected = Sys.getDeviceSettings().phoneConnected;
 		var alarmCount = Sys.getDeviceSettings().alarmCount;
 		var notificationCount = Sys.getDeviceSettings().notificationCount;
-		var hrHist =  AM.getHeartRateHistory(Cal.duration({ :minutes => 1}), true);
-		var heartRateSample = hrHist.next();
-		var heartRate = 0.0;
-		var nHeartRate = 0;
-		while (heartRateSample != null && nHeartRate < 61) {
-			heartRate += heartRateSample.heartRate;
-			heartRateSample = hrHist.next();
-			nHeartRate++;
-		}
-		heartRate /= nHeartRate;
+		var hrHist =  AM.getHeartRateHistory(1, true);
+		var heartRate = hrHist.next().heartRate;
+		//var heartRate = 0.0;
+		//var nHeartRate = 0;
+		//while (heartRateSample != null && nHeartRate < 61) {
+			//heartRate += heartRateSample.heartRate;
+			//heartRateSample = hrHist.next();
+			//nHeartRate++;
+		//}
+		//heartRate /= nHeartRate;
 		//System.println(heartRate);
 
 		//phoneConnected = true;
@@ -100,9 +102,9 @@ class SimplogView extends Ui.WatchFace {
 		if (altitude != null) {
 			drawAltitude(dc, altitude);
 		}
-		//if (location != null) {
+		if (location != null) {
 			drawSun(dc, time, location, altitude);
-		//}
+		}
     }
 
     // Called when this View is removed from the screen. Save the
