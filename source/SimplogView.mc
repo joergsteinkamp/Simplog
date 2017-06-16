@@ -7,6 +7,7 @@ using Toybox.ActivityMonitor as AM;
 using Toybox.System as Sys;
 using Toybox.Math as Math;
 using Toybox.Lang as Lang;
+// using Toybox.Sensor as Sensor;
 
 class SimplogView extends Ui.WatchFace {
 	// display properties
@@ -45,8 +46,21 @@ class SimplogView extends Ui.WatchFace {
 		var phoneConnected = Sys.getDeviceSettings().phoneConnected;
 		var alarmCount = Sys.getDeviceSettings().alarmCount;
 		var notificationCount = Sys.getDeviceSettings().notificationCount;
-		var hrHist =  AM.getHeartRateHistory(1, true);
-		var heartRate = hrHist.next().heartRate;
+		var heartRate = 0;
+		if (AM has :getHeartRateHistory) {
+		  var hrHist =  AM.getHeartRateHistory(1, true);
+		  heartRate = hrHist.next().heartRate;
+		// No Sensor access in watch mode!
+		//} else if (Sensor has :getInfo) {
+		//  var sensorInfo = Sensor.getInfo();
+		//  if (sensorInfo has :heartRate) {
+		//    heartRate = sensorInfo.heartRate;
+		//  }
+		} else {
+		  heartRate = null;
+		}
+		
+		
 		//var heartRate = 0.0;
 		//var nHeartRate = 0;
 		//while (heartRateSample != null && nHeartRate < 61) {
