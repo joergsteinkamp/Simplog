@@ -3,7 +3,7 @@
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 
-function drawBattery(dc) {
+function drawBattery(dc, centerX, centerY, radius, radiusBattery, symbolScale) {
 	var battStat = Sys.getSystemStats().battery.toNumber();
 	if (battStat > 80) {
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);

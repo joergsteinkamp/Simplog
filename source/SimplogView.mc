@@ -1,23 +1,20 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Time as Time;
-using Toybox.Time.Gregorian as Cal;
+//using Toybox.Time.Gregorian as Cal;
 using Toybox.Activity as Act;
 using Toybox.ActivityMonitor as AM;
 using Toybox.System as Sys;
-using Toybox.Math as Math;
-using Toybox.Lang as Lang;
+// using Toybox.Math as Math;
 // using Toybox.Sensor as Sensor;
 
 class SimplogView extends Ui.WatchFace {
 	// display properties
-	hidden var centerX, centerY, radius;
+	var centerX, centerY, radius;
 	// size of colored battery indicator (center point) 
-	hidden var radiusBattery = 8;
+	var radiusBattery = 8;
 	// scale factor for symbols
-	hidden var symbolScale = 1;
-
-	hidden var sunTimes;
+	var symbolScale = 1;
 
     function initialize() {
         WatchFace.initialize();
@@ -25,9 +22,9 @@ class SimplogView extends Ui.WatchFace {
 
     // Load your resources here
     function onLayout(dc) {
-    	centerX = dc.getWidth() / 2;
-    	centerY = dc.getHeight() / 2;
-    	radius = centerX < centerY ? centerX : centerY;
+    	self.centerX = dc.getWidth() / 2;
+    	self.centerY = dc.getHeight() / 2;
+    	self.radius = self.centerX < self.centerY ? self.centerX : self.centerY;
         setLayout(Rez.Layouts.WatchFace(dc));
     }
 
@@ -59,8 +56,7 @@ class SimplogView extends Ui.WatchFace {
 		} else {
 		  heartRate = null;
 		}
-		
-		
+
 		//var heartRate = 0.0;
 		//var nHeartRate = 0;
 		//while (heartRateSample != null && nHeartRate < 61) {
@@ -75,7 +71,8 @@ class SimplogView extends Ui.WatchFace {
 		//alarmCount = 1;
 		//notificationCount=19;
 		//altitude=200;
-
+		//location = null;
+	
 		//var amInfo = AM.getInfo();
 		//System.println(amInfo.moveBarLevel);
 		//System.println(AM.MOVE_BAR_LEVEL_MAX);
@@ -92,33 +89,33 @@ class SimplogView extends Ui.WatchFace {
         erase(dc);
 
         // draw the watch components
-        drawTicks(dc);
-		drawDay(dc, time);
+        drawTicks(dc, self.centerX, self.centerY, self.radius);
+		drawDay(dc, time, self.centerX, self.centerY, self.radius);
 
 		// draw the notification count bellow the watch hands 
 		if (notificationCount > 0) {
-			drawNotificationCount(dc, notificationCount);
+			drawNotificationCount(dc, self.centerX, self.centerY, self.radius, self.symbolScale, notificationCount);
 		}
 
-		drawHands(dc);
-		drawBattery(dc);
+		drawHands(dc, self.centerX, self.centerY, self.radius, self.radiusBattery);
+		drawBattery(dc, self.centerX, self.centerY, self.radius, self.radiusBattery, self.symbolScale);
 
 		// draw info fields on top, so they are not covered by the watch hands
 		if (phoneConnected) {
-			drawPhoneConnected(dc);
+			drawPhoneConnected(dc, self.centerX, self.centerY, self.radius, self.symbolScale);
 		}
 		if (alarmCount > 0) {
-			drawAlarmCount(dc, alarmCount);
+			drawAlarmCount(dc, self.centerX, self.centerY, self.radius, alarmCount);
 		}
 		if (heartRate != null && heartRate < 250 && heartRate > 0) {
-			drawHeartRate(dc, heartRate);
+			drawHeartRate(dc, self.centerX, self.centerY, self.radius, self.radiusBattery, heartRate);
 		}
 		if (altitude != null) {
-			drawAltitude(dc, altitude);
+			drawAltitude(dc, self.centerX, self.centerY, self.radius, self.radiusBattery, self.symbolScale, altitude);
 		}
-		if (location != null) {
-			drawSun(dc, time, location, altitude);
-		}
+		//if (location != null) {
+			drawSun(dc, self.centerX, self.centerY, self.radius, time, location, altitude);
+		//}
     }
 
     // Called when this View is removed from the screen. Save the

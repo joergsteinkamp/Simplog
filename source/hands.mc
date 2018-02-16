@@ -1,7 +1,8 @@
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.Math as Math;
 
-function drawHands(dc) {
+function drawHands(dc, centerX, centerY, radius, radiusBattery) {
 	dc.setPenWidth(1);
 	var time = Sys.getClockTime();
 	var dayMinutes = time.min + time.hour * 60;

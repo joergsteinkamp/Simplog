@@ -1,21 +1,25 @@
-//using Toybox.Time as Time;
 using Toybox.Time.Gregorian as Cal;
 using Toybox.Math as Math;
 using Toybox.Graphics as Gfx;
+using Toybox.Lang as Lang;
+using Toybox.System as Sys;
 
-function drawSun(dc, time, location, altitude) {
+function drawSun(dc, centerX, centerY, radius, time, location, altitude) {
+
 	var fontHeight = Gfx.getFontHeight(Gfx.FONT_XTINY);
 	var deg2rad = Math.PI / 180.0;
-	//update only once an hour
-	if (sunTimes == null || Cal.info(time, Time.FORMAT_SHORT).min % 60 == 0) {
-		sunTimes = sunRiseSet(time, location, altitude);
-		if (sunTimes == null) {
-			return;
-		}
+	var sunTimes = sunRiseSet(time, location, altitude);
+	if (sunTimes == null) {
+	  return(null);
 	}
+
 	var sunRise = Cal.info(sunTimes[0], Cal.FORMAT_SHORT);
     var sunSet = Cal.info(sunTimes[1], Cal.FORMAT_SHORT);
-	
+
+	if (altitude < 0) {
+		altitude = 0;
+	}
+
 	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
 	//if (time.greaterThan(sunTimes[0])) {
 		dc.drawText(centerX, centerY + radius / 3.3 + fontHeight / 2, Gfx.FONT_TINY,
@@ -53,8 +57,8 @@ function sunRiseSet(time, location, altitude) {
 		long = location.toDegrees()[1];
 	    lat  = location.toDegrees()[0];
 	} else {
+		Sys.println("sunRiseSet: Cannot get current location!");
 		return(null);
-		//System.println("sunRiseSet: Cannot get current location!");
 	}
 
     var refDate = Cal.moment({ :year=>2000, :month=>1, :day=>1, :hour=>12, :minute=>0, :second=>0 });

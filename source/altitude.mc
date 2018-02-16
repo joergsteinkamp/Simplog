@@ -1,7 +1,7 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 
-function drawAltitude(dc, altitude) {
+function drawAltitude(dc, centerX, centerY, radius,radiusBattery, symbolScale, altitude) {
 	var fontHeight = Gfx.getFontHeight(Gfx.FONT_XTINY);
 	dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
 	dc.setPenWidth(symbolScale);

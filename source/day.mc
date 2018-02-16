@@ -2,8 +2,9 @@
 using Toybox.Graphics as Gfx;
 using Toybox.Lang as Lang;
 using Toybox.Time.Gregorian as Cal;
+using Toybox.Time as Time;
 
-function drawDay(dc, time) {
+function drawDay(dc, time, centerX, centerY, radius) {
     var date = Cal.info(time, Time.FORMAT_MEDIUM);
 	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_WHITE);
 	var wday = Lang.format("$1$", [date.day_of_week]);

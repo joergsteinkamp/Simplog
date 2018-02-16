@@ -2,8 +2,8 @@
 using Toybox.Graphics as Gfx;
 using Toybox.Math as Math;
 
-function drawTicks(dc) {
-	var length = 0;
+function drawTicks(dc, centerX, centerY, radius) {
+ 	var length = 0;
 	var angle  = 0;
 	var innerX = 0;
 	var outerX = 0;

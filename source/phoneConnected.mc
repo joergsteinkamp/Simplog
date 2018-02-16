@@ -1,7 +1,7 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 
-function drawPhoneConnected(dc) {
+function drawPhoneConnected(dc, centerX, centerY, radius, symbolScale) {
 	dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_TRANSPARENT);
 	dc.setPenWidth(symbolScale);
 	var btSymbol = [ [0, 9], [6, 3], [3, 0], [3, 12], [6, 9], [-1, 2] ];

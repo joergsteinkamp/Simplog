@@ -1,7 +1,8 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.Math as Math;
 
-function drawNotificationCount(dc, notificationCount) {
+function drawNotificationCount(dc, centerX, centerY, radius, symbolScale, notificationCount) {
 	var fontHeight = Gfx.getFontHeight(Gfx.FONT_XTINY);
 	var digits = Math.floor(1 + Math.log(notificationCount, 10));
 	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
