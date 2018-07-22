@@ -1,0 +1,19 @@
+Version 0.1.17:
+  sunrise/-set: corrected check for negative altitude
+
+Version 0.1.16:
+  Updated internal function calls
+  Negative altitude in sunrise/-set calculation is set to zero
+
+Version 0.1.14:
+  Added some more devices on user request, which have no wrist HR sensor. Sadly I didn´t find a way how to access the chest strap HR sensor from the watch face:
+  - Forerunner 230/630/935
+  - vívoactive
+  - fenix 3
+  - tactix Bravo
+  - quatix
+  - fenix Chronos
+  - D2 Bravo
+
+Version 0.1.12:
+  - Sunrise/-set for latest saved location (beta testing; feedback welcome)

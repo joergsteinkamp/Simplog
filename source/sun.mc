@@ -8,6 +8,9 @@ function drawSun(dc, centerX, centerY, radius, time, location, altitude) {
 
 	var fontHeight = Gfx.getFontHeight(Gfx.FONT_XTINY);
 	var deg2rad = Math.PI / 180.0;
+	if (altitude < 0) {
+		altitude = 0;
+	}
 	var sunTimes = sunRiseSet(time, location, altitude);
 	if (sunTimes == null) {
 	  return(null);
@@ -16,9 +19,6 @@ function drawSun(dc, centerX, centerY, radius, time, location, altitude) {
 	var sunRise = Cal.info(sunTimes[0], Cal.FORMAT_SHORT);
     var sunSet = Cal.info(sunTimes[1], Cal.FORMAT_SHORT);
 
-	if (altitude < 0) {
-		altitude = 0;
-	}
 
 	dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
 	//if (time.greaterThan(sunTimes[0])) {
@@ -43,6 +43,7 @@ function drawSun(dc, centerX, centerY, radius, time, location, altitude) {
 		dc.drawLine(centerX - 2.5 * fontHeight, centerY + radius / 3.5 + fontHeight,
 					centerX - 1.5 * fontHeight, centerY + radius / 3.5 + fontHeight);
 	}
+	return(null);
 }
 // formulas taken and modified from
 // https://en.wikipedia.org/wiki/Sunrise_equation
