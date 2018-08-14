@@ -1,3 +1,6 @@
+Version 0.1.18:
+  added a seconds hand if the device isn't in low power mode
+
 Version 0.1.17:
   sunrise/-set: corrected check for negative altitude
 
