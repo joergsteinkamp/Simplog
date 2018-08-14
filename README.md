@@ -1,4 +1,7 @@
 # Simplog
+
+See it at [apps.garmin.com](https://apps.garmin.com/en-AU/apps/e0a3add2-0596-4da3-a06c-757e05326320)
+
 ## A simple Garmin Connect IQ watch face with
 - Weekday/day of month
 - Battery status
