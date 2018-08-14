@@ -1,13 +1,10 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
-using Toybox.Time as Time;
-//using Toybox.Time.Gregorian as Cal;
+using Toybox.Time;
 using Toybox.Activity as Act;
 using Toybox.ActivityMonitor as AM;
 using Toybox.System as Sys;
-// using Toybox.Math as Math;
-// using Toybox.Sensor as Sensor;
-
+using Toybox.Timer;
 class SimplogView extends Ui.WatchFace {
 	// display properties
 	var centerX, centerY, radius;
@@ -15,6 +12,8 @@ class SimplogView extends Ui.WatchFace {
 	var radiusBattery = 8;
 	// scale factor for symbols
 	var symbolScale = 1;
+
+	var inLowPower = true;
 
     function initialize() {
         WatchFace.initialize();
@@ -37,35 +36,21 @@ class SimplogView extends Ui.WatchFace {
     // Update the view
     function onUpdate(dc) {
         var time = Time.now();
-		var altitude = Act.getActivityInfo().altitude;
-		var location = Act.getActivityInfo().currentLocation;
+        var actInfo  = Act.getActivityInfo();
+		var altitude = actInfo.altitude;
+		var location = actInfo.currentLocation;
 
-		var phoneConnected = Sys.getDeviceSettings().phoneConnected;
-		var alarmCount = Sys.getDeviceSettings().alarmCount;
-		var notificationCount = Sys.getDeviceSettings().notificationCount;
+		var devStat = Sys.getDeviceSettings();
+		var phoneConnected    = devStat.phoneConnected;
+		var alarmCount        = devStat.alarmCount;
+		var notificationCount = devStat.notificationCount;
 		var heartRate = 0;
 		if (AM has :getHeartRateHistory) {
 		  var hrHist =  AM.getHeartRateHistory(1, true);
 		  heartRate = hrHist.next().heartRate;
-		// No Sensor access in watch mode!
-		//} else if (Sensor has :getInfo) {
-		//  var sensorInfo = Sensor.getInfo();
-		//  if (sensorInfo has :heartRate) {
-		//    heartRate = sensorInfo.heartRate;
-		//  }
 		} else {
 		  heartRate = null;
 		}
-
-		//var heartRate = 0.0;
-		//var nHeartRate = 0;
-		//while (heartRateSample != null && nHeartRate < 61) {
-			//heartRate += heartRateSample.heartRate;
-			//heartRateSample = hrHist.next();
-			//nHeartRate++;
-		//}
-		//heartRate /= nHeartRate;
-		//System.println(heartRate);
 
 		//phoneConnected = true;
 		//alarmCount = 1;
@@ -73,18 +58,6 @@ class SimplogView extends Ui.WatchFace {
 		//altitude=200;
 		//location = null;
 	
-		//var amInfo = AM.getInfo();
-		//System.println(amInfo.moveBarLevel);
-		//System.println(AM.MOVE_BAR_LEVEL_MAX);
-		//System.println(AM.MOVE_BAR_LEVEL_MIN);
-		//System.println(amInfo.steps);
-		//System.println(amInfo.stepGoal);
-		//System.println(amInfo.floorsClimbed);
-		//System.println(amInfo.floorsClimbedGoal);
-		//var DS = System.getDeviceSettings();
-		//System.println(DS.screenShape);
-		//System.println(DS.partNumber);
-
         // clear the display
         erase(dc);
 
@@ -97,7 +70,7 @@ class SimplogView extends Ui.WatchFace {
 			drawNotificationCount(dc, self.centerX, self.centerY, self.radius, self.symbolScale, notificationCount);
 		}
 
-		drawHands(dc, self.centerX, self.centerY, self.radius, self.radiusBattery);
+		drawHands(dc, self.centerX, self.centerY, self.radius, self.radiusBattery, inLowPower);
 		drawBattery(dc, self.centerX, self.centerY, self.radius, self.radiusBattery, self.symbolScale);
 
 		// draw info fields on top, so they are not covered by the watch hands
@@ -126,10 +99,14 @@ class SimplogView extends Ui.WatchFace {
 
     // The user has just looked at their watch. Timers and animations may be started here.
     function onExitSleep() {
+     	inLowPower=false;
+    	Ui.requestUpdate();
     }
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+        inLowPower=true;
+    	Ui.requestUpdate();
     }
 
 	// reset the display

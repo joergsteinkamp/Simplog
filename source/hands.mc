@@ -2,7 +2,7 @@ using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Math as Math;
 
-function drawHands(dc, centerX, centerY, radius, radiusBattery) {
+function drawHands(dc, centerX, centerY, radius, radiusBattery, inLowPower) {
 	dc.setPenWidth(1);
 	var time = Sys.getClockTime();
 	var dayMinutes = time.min + time.hour * 60;
@@ -42,7 +42,7 @@ function drawHands(dc, centerX, centerY, radius, radiusBattery) {
 	// minute hand
 	//System.println(Math.sin(angle) * radius * 0.8 + Math.cos(angle) * radiusBattery * 0.375);
 	//System.println(Math.round(Math.sin(angle) * radius * 0.8 + Math.cos(angle) * radiusBattery * 0.375));
-	
+
 	angle = Math.PI * dayMinutes / 30.0;
 	var handMin = [ [ centerX - Math.sin(angle) * radiusBattery * 2.5,
 					  centerY + Math.cos(angle) * radiusBattery * 2.5],
@@ -73,4 +73,12 @@ function drawHands(dc, centerX, centerY, radius, radiusBattery) {
 	}
 	dc.drawLine(handMin[0][0], handMin[0][1], handMin[handMin.size() - 1][0], handMin[handMin.size() - 1][1]);
 	dc.drawLine(handMin[0][0], handMin[0][1], handMin[4][0], handMin[4][1]);
+
+	if (!inLowPower) {
+	  	var secs = time.sec;
+	  	//Sys.println(secs);
+	 	angle = Math.PI * secs / 30.0;
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+		dc.drawLine(centerX, centerY, centerX + Math.sin(angle) * radius * 0.9, centerY - Math.cos(angle) * radius * 0.9);
+	}	
 }
