@@ -25,6 +25,8 @@
             <iq:language>deu</iq:language>
             <iq:language>eng</iq:language>
         </iq:languages>
-
+        
+        <iq:barrels/>
+        
     </iq:application>
 </iq:manifest>
